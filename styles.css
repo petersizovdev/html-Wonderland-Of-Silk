@@ -20,9 +20,13 @@
 
 @font-face {
   font-family: "Falidae";
-  src: url("./fonts/Felidae-Regular.woff") format("woff");
+  src: url("./fonts/Felidae-Regular.woff") format("woff"),
+    url("./fonts/Felidae-Regular.woff2") format("woff2");
 }
-
+* {
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   margin: 0;
@@ -37,12 +41,14 @@ html {
 }
 h1 {
   font-size: 2.6rem;
+  font-family: Falidae;
 }
 h2 {
   font-size: 2rem;
 }
 h3 {
   font-size: 1.5rem;
+  font-family: Falidae;
 }
 h4 {
   font-size: 1rem;
@@ -106,7 +112,43 @@ body {
 }
 
 .mb2 {
+  display: flex;
+  align-items: center;
   min-height: 70vh;
+}
+
+.item__box {
+  display: flex;
+}
+.item__left img {
+  width: 90%;
+}
+.item__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 700px;
+}
+
+.item__desc-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__desc-bottom-left {
+  display: flex;
+  flex-direction: column;
+}
+.item__desc-bottom-right {
+  display: flex;
+  flex-direction: column;
+}
+.counter {
+  display: flex;
+}
+.size {
+  display: flex;
+  gap: 1rem;
 }
 
 .footer__box {
