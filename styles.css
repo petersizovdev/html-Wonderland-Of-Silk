@@ -22,8 +22,7 @@
 
 @font-face {
   font-family: "Falidae";
-  src: url("./fonts/Felidae-Regular.woff") format("woff"),
-    url("./fonts/Felidae-Regular.woff2") format("woff2");
+  src: url("./fonts/Felidae.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -44,16 +43,22 @@ html {
 h1 {
   font-size: 2.6rem;
   font-family: Falidae;
+  font-weight: 400;
 }
 h2 {
   font-size: 2rem;
+  font-family: Falidae;
+  font-weight: 400;
 }
 h3 {
   font-size: 1.5rem;
   font-family: Falidae;
+  font-weight: 400;
 }
 h4 {
   font-size: 1rem;
+  font-family: Falidae;
+  font-weight: 400;
 }
 p {
   font-size: 1.5rem;
