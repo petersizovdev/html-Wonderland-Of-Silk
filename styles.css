@@ -58,9 +58,12 @@ body {
   display: flex;
 
   flex-direction: column;
-
+  overflow-x: hidden;
   background-color: var(--beige);
   color: var(--darkbrown);
+}
+.blur {
+  top: 0;
 }
 
 .header__short {
@@ -108,6 +111,7 @@ body {
 
 .footer__box {
   display: flex;
+
   flex-direction: column;
   width: 100%;
   border-top: 1px solid var(--pink);
@@ -158,4 +162,19 @@ body {
 .social {
   display: flex;
   gap: 3rem;
+}
+.blurline {
+  position: absolute;
+  top: 107%;
+  z-index: -1;
+}
+.blurhead {
+  position: absolute;
+  left: 50%;
+  z-index: -1;
+}
+.bluraside {
+  position: absolute;
+  top: 0%;
+  z-index: -1;
 }
