@@ -103,6 +103,7 @@ body {
   padding: 0.5rem 2rem;
   background-color: var(--pink-light);
   font-size: 1rem;
+
   color: var(--darkbrown);
   font-family: "Gilroy Light", sans-serif;
 }
@@ -173,6 +174,10 @@ body {
   gap: 10rem;
 }
 .catalog__box-row {
+  display: flex;
+  gap: 2rem;
+}
+.catalog__box-row-items {
   display: flex;
   gap: 2rem;
 }
@@ -267,7 +272,7 @@ body {
 
 .card__box {
   width: 100%;
-  min-width: 440px;
+
   padding: 2rem;
   border: 1px solid var(--brown);
   display: flex;
@@ -658,7 +663,7 @@ body {
 .blurright {
   position: absolute;
   right: 0%;
-  top: 67.5%;
+  top: 60%;
   z-index: -1;
 }
 .bg {
@@ -752,4 +757,220 @@ body {
   color: var(--brown);
   text-decoration: none;
   cursor: pointer;
+}
+#wrap {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+@media (max-width: 425px) {
+  html {
+    font-size: 16px;
+  }
+
+  .hs1 {
+    display: none;
+  }
+  .hs2 {
+    padding: 5rem 1rem 0rem 1rem;
+  }
+  .hs2 img {
+    width: 90%;
+  }
+  .hs2 nav {
+    gap: 2rem;
+  }
+
+  .about__box-short {
+    display: flex;
+    width: 100%;
+    height: 20svh;
+  }
+  .mb1 {
+    display: none;
+  }
+  .ab2 {
+    height: 30svh;
+    padding: 0 1rem;
+  }
+  .ab2 img {
+    width: 100%;
+  }
+  .about__box-short {
+    display: flex;
+    width: 100%;
+    min-height: 0px;
+  }
+  .ab3 {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .ab3 h2 {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
+
+  .mini__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .b-l {
+    max-width: 150px;
+  }
+
+  #inline3 {
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    padding: 2rem 0rem 4rem 4rem;
+    max-height: 25px;
+    max-width: 4210px;
+    margin-top: 5rem;
+    margin-left: 0rem;
+  }
+  #inline {
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    padding: 2rem 3rem 3.5rem 3rem;
+    max-height: 25px;
+    max-width: 420px;
+    margin-top: 5rem;
+    margin-left: 1rem;
+  }
+  .row__item a {
+    height: 50%;
+  }
+  .row__item {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .image-container img {
+    transition: opacity 0.3s ease;
+  }
+  .catalog__box {
+    gap: 2rem;
+  }
+
+  .catalog__box-row {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .row__category-name h2 {
+    rotate: 0deg;
+  }
+  .row__category {
+    background-color: var(--blue);
+  }
+
+  #displaynone {
+    display: none;
+  }
+
+  .about__box {
+    display: flex;
+    width: 85%;
+    min-height: 0;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 10rem;
+  }
+
+  .about__info-top {
+    flex-direction: column;
+    width: 90%;
+  }
+  .info__text {
+    font-size: 1.25rem;
+  }
+
+  .abmid {
+    flex-direction: column;
+    width: 80%;
+    padding: 1rem;
+  }
+  .ab1-l,
+  .ab1-r {
+    border: 0;
+  }
+
+  .cart__box {
+    margin-left: -4rem;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  .card__box {
+    scale: 0.8;
+  }
+  .card__right-bottom {
+    flex-direction: column;
+  }
+
+  .cart__sum {
+    display: flex;
+    align-items: baseline;
+    gap: 5rem;
+    margin: 0 auto;
+    padding-top: 0rem;
+  }
+  .cart__button {
+    margin: auto auto 0 auto;
+    padding-top: 5rem;
+  }
+
+  .item__box {
+    padding: 2rem;
+    gap: 5rem;
+    flex-direction: column;
+  }
+  .item__desc-bottom {
+    margin-top: 5rem;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .item__desc-bottom-right {
+    gap: 2rem;
+  }
+  /*FOOTER*/
+
+  .fb1 {
+    padding: 1rem;
+  }
+  .fb2 {
+    display: none;
+  }
+  #logofiilet {
+    width: 80%;
+    margin-left: 2rem;
+  }
+  #inline2 {
+    border: 1px solid var(--pink);
+    border-radius: 50%;
+    padding: 2rem 2rem 3rem 2rem;
+    max-height: 25px;
+    max-width: 400px;
+    margin-top: -1rem;
+    margin-left: 1em;
+  }
+  .social {
+    gap: 1rem;
+  }
+  #about__footer {
+    margin-top: 5rem;
+  }
+  .blurline {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
 }
