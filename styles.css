@@ -37,7 +37,7 @@ body {
   padding: 0;
   min-width: 425px;
   width: 100%;
-
+  scroll-behavior: smooth;
   font-family: "Gilroy Light", sans-serif;
 }
 html {
@@ -189,6 +189,7 @@ body {
 }
 
 .row__item {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -656,4 +657,13 @@ body {
 .bg {
   position: absolute;
   top: 0;
+}
+.blurline,
+.blurhead,
+.bluraside,
+.blurmiddle,
+.blurmiddle2,
+.blurright,
+.bg {
+  pointer-events: none; /* This will allow user interactions with other elements */
 }
