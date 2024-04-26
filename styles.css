@@ -36,14 +36,12 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-width: 1920px;
-
+  scale: 0.95;
   scroll-behavior: smooth;
   font-family: "Gilroy Light", sans-serif;
 }
 html {
   font-size: 24px;
-  
 }
 h1 {
   font-size: 2.6rem;
