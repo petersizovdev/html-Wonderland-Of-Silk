@@ -71,7 +71,49 @@
           <h1>1550 р.</h1>
         </div>
         <div class="cart__button">
-          <button class="button">Оформить заказ!</button>
+          <button id="open-modal" class="button">Оформить заказ!</button>
+        </div>
+
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Оформление заказа</h1>
+            <div class="formmid">
+              <div class="map">
+                <label> Пункт самовывоза:</label>
+                <label><img src="./img/clock.svg" alt="" />10:00 — 21:00</label>
+                <label
+                  ><img src="./img/point.svg" alt="" />Лиговский пр., 283,
+                  Санкт-Петербург, 196084</label
+                >
+              </div>
+
+              <div class="formmodal">
+                <img src="./img/map.png" alt="" />
+                <form class="forminputs">
+                  <label for="input1">Ваш номер телефона:</label><br />
+                  <input class="input__form" type="tel" id="input1" name="tel" /><br />
+                  <label for="input2">Ваш почтовый адрес:</label><br />
+                  <input class="input__form" type="email" id="input2" name="email" /><br />
+
+                  <div class="caution">
+                    <p>
+                      *в течении двух дней с Вами свяжутся по почте для
+                      уточнения желаемой даты доставки
+                    </p>
+
+                    <p>
+                      **оплата производится наличными или любой банковской
+                      картой при получении
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <button type="submit" id="open-modal" class="button">
+              Оформить заказ!
+            </button>
+          </div>
         </div>
       </div>
     </main>
@@ -104,5 +146,7 @@
     </footer>
     <div class="bluraside"><img src="./img/bluraside.svg" alt="" /></div>
     <div class="blurline"><img src="./img/blurline.svg" alt="" /></div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
