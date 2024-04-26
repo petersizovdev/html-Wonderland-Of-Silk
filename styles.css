@@ -135,7 +135,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 10rem;
+  margin-top: 9rem;
 }
 .block {
   display: flex;
@@ -148,6 +148,7 @@ body {
   width: 100%;
   border: 1px solid var(--pink);
   border-radius: 0.85rem;
+  padding-top: 0.25rem;
 }
 .b-r {
   display: flex;
@@ -156,6 +157,7 @@ body {
   width: 100%;
   border: 1px solid var(--pink);
   border-radius: 0.85rem;
+  padding-top: 0.25rem;
 }
 
 .catalog__box {
@@ -178,8 +180,8 @@ body {
   align-items: center;
   background-color: var(--blue);
   height: 100%;
-
   max-width: 3rem;
+  max-height: 500px;
 }
 
 .row__category-name h2 {
@@ -192,8 +194,48 @@ body {
   flex-direction: column;
 }
 
-.row__item h2 {
-  line-height: 50%;
+.image-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+}
+
+.image-container img {
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover img {
+  opacity: 0.5;
+  filter: brightness(50%);
+  background-color: var(--pink);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-family: Falidae;
+  color: var(--white);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.image-container:hover .overlay-text {
+  opacity: 1;
+
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  max-width: 300px;
+  width: 100%;
+  border: 1px solid var(--white);
+  border-radius: 0.85rem;
+  padding-top: 0.25rem;
 }
 
 .main__box {
@@ -614,39 +656,4 @@ body {
 .bg {
   position: absolute;
   top: 0;
-}
-
-
-
-
-
-.image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.image-container img {
-  transition: opacity 0.3s ease;
-}
-
-.image-container:hover img {
-  opacity: 0.5;
-  filter: brightness(50%);
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: white;
-  text-align: center;
-}
-
-.image-container:hover .overlay-text {
-  opacity: 1;
-  background-color: #9e8d86;
-  padding: 10px;
 }
