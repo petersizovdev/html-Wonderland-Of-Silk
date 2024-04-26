@@ -759,6 +759,7 @@ body {
   width: 100%;
   flex-wrap: nowrap;
 }
+
 @media (max-width: 425px) {
   html {
     font-size: 16px;
@@ -967,5 +968,10 @@ body {
     position: absolute;
     bottom: 0;
     z-index: -1;
+  }
+}
+@media (max-width: 1440px) {
+  html {
+    font-size: 16px;
   }
 }
