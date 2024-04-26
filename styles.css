@@ -27,7 +27,6 @@
 * {
   margin: 0;
   padding: 0;
- 
 }
 *:focus {
   outline: none;
@@ -35,9 +34,8 @@
 
 html,
 body {
-  margin: 0;
-  padding: 0;
- 
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: "Gilroy Light", sans-serif;
 }
@@ -82,10 +80,6 @@ label img {
   margin-right: 0.5rem;
 }
 body {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  overflow-x: hidden;
   background-color: var(--beige);
   color: var(--darkbrown);
 }
