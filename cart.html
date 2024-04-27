@@ -3,30 +3,39 @@
   <head>
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>WonderlandOfSilk</title>
   </head>
   <body>
-    <div id="displaynone" class="blurhead">
-      <img src="./img/blurhead.svg" alt="" />
-    </div>
-
-    <header class="header__short">
+    <header class="header">
       <div class="hs1"></div>
       <div class="hs2">
         <nav>
           <a href="./index.html">Каталог</a>
           <a href="./about.html">О нас</a>
-          <a href="./#about__footer">Контакты</a>
+          <a href="./#contacts">Контакты</a>
         </nav>
         <a href="./cart.html"><img src="./img/carticon.svg" alt="cart" /></a>
       </div>
+      <div class="hs0"></div>
     </header>
 
     <main class="cart__box">
+      <div class="hs0"></div>
+
+
+
+
+
       <div class="cart__container">
-        <div class="card__box">
+
+
+
+
+
+
+        <div class="card">
           <div class="card__left">
             <img src="./img/tem1.png" alt="" />
           </div>
@@ -47,27 +56,20 @@
             </div>
           </div>
         </div>
-        <div class="card__box">
-          <div class="card__left">
-            <img src="./img/tem1.png" alt="" />
-          </div>
-          <div class="card__right">
-            <h1>Резинка для волос широкая</h1>
-            <div class="size">
-              <p>Размер:</p>
-              <h3>M</h3>
-            </div>
 
-            <div class="card__right-bottom">
-              <div class="counter">
-                <button class="button__item-min">-</button>
-                <input class="input__item" />
-                <button class="button__item-pls">+</button>
-              </div>
-              <h1>1550 р.</h1>
-            </div>
-          </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="cart__sum">
           <p>Итого:</p>
@@ -76,62 +78,63 @@
         <div class="cart__button">
           <button id="open-modal" class="button">Оформить заказ!</button>
         </div>
-
-        <div id="modal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <h1>Оформление заказа</h1>
-            <div class="formmid">
-              <div class="map">
-                <label> Пункт самовывоза:</label>
-                <label><img src="./img/clock.svg" alt="" />10:00 — 21:00</label>
-                <label
-                  ><img src="./img/point.svg" alt="" />Лиговский пр., 283,
-                  Санкт-Петербург, 196084</label
-                >
-              </div>
-
-              <div class="formmodal">
-                <img src="./img/map.png" alt="" />
-                <form class="forminputs">
-                  <label for="input1">Ваш номер телефона:</label><br />
-                  <input
-                    class="input__form"
-                    type="tel"
-                    id="input1"
-                    name="tel"
-                  /><br />
-                  <label for="input2">Ваш почтовый адрес:</label><br />
-                  <input
-                    class="input__form"
-                    type="email"
-                    id="input2"
-                    name="email"
-                  /><br />
-
-                  <div class="caution">
-                    <p>
-                      *в течении двух дней с Вами свяжутся по почте для
-                      уточнения желаемой даты доставки
-                    </p>
-
-                    <p>
-                      **оплата производится наличными или любой банковской
-                      картой при получении
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <button type="submit" id="open-modal" class="button">
-              Оформить заказ!
-            </button>
-          </div>
-        </div>
       </div>
+      <div class="hs0"></div>
     </main>
 
-    <footer id="about__footer" class="footer__box">
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>Оформление заказа</h1>
+        <div class="formmid">
+          <div class="map">
+            <label> Пункт самовывоза:</label>
+            <label><img src="./img/clock.svg" alt="" />10:00 — 21:00</label>
+            <label
+              ><img src="./img/point.svg" alt="" />Лиговский пр., 283,
+              Санкт-Петербург, 196084</label
+            >
+          </div>
+
+          <div class="formmodal">
+            <img src="./img/map.png" alt="" />
+            <form class="forminputs">
+              <label for="input1">Ваш номер телефона:</label><br />
+              <input
+                class="input__form"
+                type="tel"
+                id="input1"
+                name="tel"
+              /><br />
+              <label for="input2">Ваш почтовый адрес:</label><br />
+              <input
+                class="input__form"
+                type="email"
+                id="input2"
+                name="email"
+              /><br />
+
+              <div class="caution">
+                <p>
+                  *в течении двух дней с Вами свяжутся по почте для уточнения
+                  желаемой даты доставки
+                </p>
+
+                <p>
+                  **оплата производится наличными или любой банковской картой
+                  при получении
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <button type="submit" id="open-modal" class="button">
+          Оформить заказ!
+        </button>
+      </div>
+    </div>
+
+    <footer id="contacts" class="footer__box">
       <div class="fr1">
         <div id="displaynone" class="fb2"></div>
         <div class="fb1">
@@ -151,19 +154,12 @@
         </div>
         <div class="fb2"></div>
       </div>
-      <div id="displaynone" class="blurmiddle2">
-        <img src="./img/bluraside.svg" alt="" />
-      </div>
+
       <div class="fr3">
         <div class="fb1"></div>
         <div class="fb2"></div>
       </div>
     </footer>
-
-    <div id="displaynone" class="bluraside">
-      <img src="./img/bluraside.svg" alt="" />
-    </div>
- 
 
     <script src="./script.js"></script>
   </body>
