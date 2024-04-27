@@ -322,6 +322,7 @@ img {
   border-left: 1px solid var(--pink);
   padding: 4% 2% 2% 2%;
   gap: 8rem;
+  width: 40%;
   text-align: right;
 }
 
@@ -622,6 +623,7 @@ label img {
 .item__desc-bottom-left {
   display: flex;
   flex-direction: column;
+  width: 30%;
   gap: 2%;
 }
 .item__desc-bottom-right {
