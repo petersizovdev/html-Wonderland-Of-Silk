@@ -515,6 +515,22 @@ img {
   .ab0 {
     padding: 2%;
   }
+  .about__info-top {
+    margin: 4% auto;
+    gap: 20%;
+
+    justify-content: center;
+  }
+  .utils__line {
+    flex-direction: column;
+  }
+  .utils__line-box {
+    margin: 0 auto;
+    width: 80%;
+  }
+  #displaynone {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   html {
