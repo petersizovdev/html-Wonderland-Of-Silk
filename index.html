@@ -5,8 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=768, initial-scale=1" />
     <title>WonderlandOfSilk</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.10.1"></script>
   </head>
+
   <body>
+    <div class="blur"></div>
     <header class="header">
       <div class="hs1"></div>
       <div class="hs2">
@@ -162,5 +165,25 @@
         <div class="fb2"></div>
       </div>
     </footer>
+    <div class="blurline"></div>
   </body>
+  <script>
+    gsap.from(".hs2", {
+      duration: 1,
+     
+      opacity: 0,
+      ease: "power2.out",
+      delay: 1,
+     
+    });
+
+    gsap.from(".db2", {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power2.out",
+      stagger: 0.2,
+      delay: 1.5,
+    });
+  </script>
 </html>

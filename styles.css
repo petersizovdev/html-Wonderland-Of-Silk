@@ -42,9 +42,15 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: "Gilroy Light", sans-serif;
+  background-color: var(--beige);
+  color: var(--darkbrown);
 }
 html {
   font-size: 20px;
+}
+body {
+  position: relative;
+  z-index: 0;
 }
 h1 {
   font-size: 2.6rem;
@@ -84,10 +90,6 @@ label {
 label img {
   margin-right: 0.5rem;
 }
-body {
-  background-color: var(--beige);
-  color: var(--darkbrown);
-}
 
 img {
   width: 100%;
@@ -116,6 +118,7 @@ img {
   display: flex;
   width: 100%;
   border-bottom: 1px solid var(--pink);
+  z-index: 999;
 }
 .hs0 {
   width: 20%;
@@ -129,7 +132,7 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 5% 0% 0 0%;
+  padding: 0% 0% 0 0%;
 }
 .hs2 img {
   margin-bottom: -0.4rem;
@@ -531,10 +534,13 @@ label img {
   cursor: pointer;
 }
 /*FOOTER*/
+
 .footer__box {
   display: flex;
   flex-direction: column;
   width: 100%;
+  z-index: 99;
+  margin-top: 10%;
   border-top: 1px solid var(--pink);
 }
 .fr1 {
@@ -811,50 +817,26 @@ label img {
   border-radius: 0.85rem;
   padding-top: 0.25rem;
 }
+.blur {
+  position: absolute;
+  background-image: url("./img/blurhead.svg");
+  width: 50%;
+  height: 99%;
+  background-repeat: no-repeat;
+  z-index: -90;
+
+  right: 0;
+  pointer-events: none; /* This will allow user interactions with other elements */
+}
 
 .blurline {
   position: absolute;
+  background-image: url("./img/blurline.svg");
+  width: 100%;
+  height: 10%;
+  background-repeat: no-repeat;
+  z-index: -99;
+
   bottom: 0;
-  z-index: -1;
-}
-.blurhead {
-  position: absolute;
-  right: 0%;
-  z-index: -1;
-}
-.bluraside {
-  position: absolute;
-  bottom: 0;
-  z-index: -1;
-}
-.blurmiddle {
-  position: absolute;
-  top: 2%;
-  filter: blur(10px);
-  z-index: -1;
-}
-.blurmiddle2 {
-  position: absolute;
-  top: 45%;
-  filter: blur(10px);
-  z-index: -1;
-}
-.blurright {
-  position: absolute;
-  right: 0%;
-  top: 60%;
-  z-index: -1;
-}
-.bg {
-  position: absolute;
-  top: 0;
-}
-.blurline,
-.blurhead,
-.bluraside,
-.blurmiddle,
-.blurmiddle2,
-.blurright,
-.bg {
   pointer-events: none; /* This will allow user interactions with other elements */
 }

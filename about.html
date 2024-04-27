@@ -5,8 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=768, initial-scale=1" />
     <title>WonderlandOfSilk</title>
+    <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap/dist/ScrollTrigger.min.js"></script>
+
+    <style>
+      .ab3 {
+        opacity: 0;
+        transition: opacity 1s;
+        transition-delay: 0.5s;
+      }
+      .ab3.show {
+        opacity: 1;
+      }
+    </style>
   </head>
   <body>
+    <div class="blur"></div>
     <header class="header">
       <div class="hs1"></div>
       <div class="hs2">
@@ -69,48 +84,42 @@
       <div class="ab3">
         <h3>Экологичность</h3>
         <img src="./img/icon1.svg" alt="" />
-        <span>
-          Шёлковые ткани создаются из&nbsp;натуральных волокон шелкопряда
-        </span>
+        <span>Шёлковые ткани создаются из натуральных волокон шелкопряда</span>
       </div>
 
       <div class="ab3">
         <h3>Воздухонепроницаемость</h3>
         <img src="./img/icon2.svg" alt="" />
-        <span>
-          Шёлк позволяет коже дышать, не&nbsp;задерживает влагу
-          и&nbsp;обеспечивает комфортный микроклимат
-        </span>
+        <span
+          >Шёлк позволяет коже дышать, не задерживает влагу и обеспечивает
+          комфортный микроклимат</span
+        >
       </div>
-      <div  id="displaynone"  class="ab3"></div>
+
+      <div id="displaynone" class="ab3"></div>
     </div>
 
     <div class="about__info-top">
-      <div  class="hs0"></div>
-      <div  id="displaynone"  class="ab3"></div>
+      <div class="hs0"></div>
+
+      <div id="displaynone" class="ab3"></div>
+
       <div class="ab3">
-        <h3>Гиппоалергенность</h3>
+        <h3>Гиппоаллергенность</h3>
         <img src="./img/icon3.svg" alt="" />
-        <span> Шёлк не&nbsp;вызывает аллергии или раздражения кожи </span>
+        <span>Шёлк не вызывает аллергии или раздражения кожи</span>
       </div>
+
       <div class="ab3">
         <h3>Терморегуляция</h3>
         <img src="./img/icon4.svg" alt="" />
-        <span>
-          Шелк подстраивается под температуру тела, обеспечивая комфорт
-          в&nbsp;любое время года
-        </span>
+        <span
+          >Шелк подстраивается под температуру тела, обеспечивая комфорт в любое
+          время года</span
+        >
       </div>
     </div>
 
-
-
-
-
-
-
-
-    
     <div class="utils__line">
       <div class="hs0"></div>
       <div class="utils__line-box">
@@ -153,36 +162,6 @@
       </div>
       <div class="hs0"></div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="utils__line">
       <div class="hs0"></div>
@@ -246,5 +225,23 @@
         <div class="fb2"></div>
       </div>
     </footer>
+    <div class="blurline"></div>
   </body>
+  <script src="./anim.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray(".ab0, h2, .ab0 img").forEach((element) => {
+      gsap.from(element, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "center bottom", // Триггер при прокрутке до центра и низа элемента
+        },
+      });
+    });
+  </script>
 </html>

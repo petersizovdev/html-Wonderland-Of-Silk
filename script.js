@@ -13,4 +13,3 @@ window.addEventListener("click", function (event) {
     document.getElementById("modal").style.display = "none";
   }
 });
-
