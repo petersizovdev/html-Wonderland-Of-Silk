@@ -37,7 +37,6 @@ addToCartButtons.forEach((button) => {
     alert(`${quantity} ${itemName} added to the cart!`);
   });
 });
-
 function displayCart() {
   const cartContainer = document.querySelector(".cart__container");
   let cartItemsHTML = "";
@@ -63,6 +62,7 @@ function displayCart() {
               <button class="button__item-pls" onclick="updateQuantity(${index}, 1)">+</button>
             </div>
             <h1>${item.price * item.quantity} р.</h1>
+            <button class="remove-button" onclick="removeItem(${index})">X</button> <!-- added remove button -->
           </div>
         </div>
       </div>
@@ -71,6 +71,12 @@ function displayCart() {
 
   cartContainer.innerHTML = cartItemsHTML;
   calculateTotal();
+}
+
+function removeItem(index) {
+  shoppingCart.splice(index, 1);
+  localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
+  displayCart();
 }
 
 function updateQuantity(index, change, newQuantity) {
