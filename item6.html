@@ -52,9 +52,9 @@
               <h1>3800 р.</h1>
             </div>
             <div class="item__desc-bottom-right">
-              <div class="counter">
+              <div class="counter-item">
                 <button class="button__item-min">-</button>
-                <input class="input__item" />
+                <input class="input__item" value="0" />
                 <button class="button__item-pls">+</button>
               </div>
               <button class="button__item">в корзину</button>
@@ -94,4 +94,22 @@
     </footer>
     <div class="blurline"></div>
   </body>
+  <script src="./cart.js"></script>
+  <script>
+    document.querySelectorAll(".counter-item").forEach(function (counter) {
+      const input = counter.querySelector(".input__item");
+      const plusButton = counter.querySelector(".button__item-pls");
+      const minusButton = counter.querySelector(".button__item-min");
+
+      plusButton.addEventListener("click", function () {
+        input.value = parseInt(input.value) + 1;
+      });
+
+      minusButton.addEventListener("click", function () {
+        if (parseInt(input.value) > 0) {
+          input.value = parseInt(input.value) - 1;
+        }
+      });
+    });
+  </script>
 </html>
