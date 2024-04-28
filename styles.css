@@ -364,13 +364,15 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 2%;
-  margin: 0 auto;  position: relative; 
+  margin: 0 auto;
+  position: relative;
 }
 .card__left img {
   width: 50%;
   height: auto;
 }
-.remove-button { /* added styles for the remove button */
+.remove-button {
+  /* added styles for the remove button */
   position: absolute;
   top: 10px;
   right: 10px;
@@ -604,10 +606,11 @@ label img {
   width: 2rem;
 }
 /*ITEM*/
-* {
-  border: 1px solid red;
+#list {
+  color: transparent;
+  background-color: transparent;
+  border: 0px;
 }
-
 .item__box {
   display: flex;
   width: 100%;

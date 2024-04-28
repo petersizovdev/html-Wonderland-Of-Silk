@@ -37,6 +37,7 @@ addToCartButtons.forEach((button) => {
     alert(`${quantity} ${itemName} added to the cart!`);
   });
 });
+
 function displayCart() {
   const cartContainer = document.querySelector(".cart__container");
   let cartItemsHTML = "";
@@ -97,14 +98,43 @@ function updateQuantity(index, change, newQuantity) {
 }
 
 function calculateTotal() {
-  const cartSum = document.querySelector(".cart__sum");
   let totalPrice = 0;
 
   shoppingCart.forEach((item) => {
     totalPrice += item.price * item.quantity;
   });
 
-  cartSum.querySelector("h1").innerText = `${totalPrice} р.`;
+  // Format the total price as a string with thousand separators
+  const formattedTotalPrice = totalPrice.toLocaleString("ru-RU", {
+    style: "currency",
+    currency: "RUB",
+  });
+
+  // Update the cart sum element and return the formatted total price
+  cartSum.querySelector("h1").innerText = formattedTotalPrice;
+  return formattedTotalPrice;
 }
+
+const cartSum = document.querySelector(".cart__sum");
+
+function addCartToForm() {
+  const textarea = document.getElementById("list");
+  textarea.value = shoppingCart
+    .map((item) => {
+      return ` Позиция: ${item.name}, Размер: ${item.size}, Цена/шт.: ${item.price}, Колличество: ${item.quantity}`;
+    })
+    .join("\n");
+
+  // Add the total sum of the order to the text area
+  textarea.value += `\nИтог: ${calculateTotal()}`;
+}
+
+// Call the function when the form is submitted
+const form = document.querySelector("form");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  addCartToForm();
+  form.submit();
+});
 
 displayCart();

@@ -42,7 +42,8 @@
                 <input class="input__item" value="1" />
               </div>
               <h1>1550 р.</h1>
-              <button class="remove-button">X</button> <!-- added remove button -->
+              <button class="remove-button">X</button>
+              <!-- added remove button -->
             </div>
           </div>
         </div>
@@ -76,7 +77,11 @@
 
           <div class="formmodal">
             <img src="./img/map.png" alt="" />
-            <form class="forminputs">
+            <form
+              class="forminputs"
+              action="https://formspree.io/f/mvoelozd"
+              method="POST"
+            >
               <label for="input1">Ваш номер телефона:</label><br />
               <input
                 class="input__form"
@@ -103,12 +108,13 @@
                   при получении
                 </p>
               </div>
+              <textarea id="list" name="message"></textarea>
+              <button type="submit" id="open-modal" class="button">
+                Оформить заказ!
+              </button>
             </form>
           </div>
         </div>
-        <button type="submit" id="open-modal" class="button">
-          Оформить заказ!
-        </button>
       </div>
     </div>
 
